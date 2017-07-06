@@ -19,7 +19,7 @@ public class Test1 {
      */
     public static void main(String[] args) {
         
-        /*System.out.println(Osoba.getLiczbaLudnosci());
+       /* System.out.println(Osoba.getLiczbaLudnosci());
         Osoba krzysiek = new Osoba();
         krzysiek.setSurname("Sokulski");
         krzysiek.setName("Krzysiek");
@@ -60,7 +60,8 @@ public class Test1 {
         
         if( "+".equals(args[1])){
             System.out.println(firstNumber + secondNumber);
-        }else if("-".equals(args[1])){
+        }else if("-".equals(args[1])){[1])){
+            System.out.println(firstNumb
             System.out.println(firstNumber - secondNumber);
         }*/
         

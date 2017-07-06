@@ -26,7 +26,7 @@ public class Osoba {
     public Osoba(){
         liczbaLudnosci++;
     }
-    
+     
     public String getName(){
        return name; 
     }

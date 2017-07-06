@@ -5,17 +5,41 @@
  */
 package kolkoikrzyzyk;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
  */
 public class MainFrame extends javax.swing.JFrame {
 
+    private ButtonDate buttonDateLeftTop;
+    private ButtonDate buttonDateLeftMid;
+    private ButtonDate buttonDateLeftBot;
+    private ButtonDate buttonDateMidTop;
+    private ButtonDate buttonDateMidMid;
+    private ButtonDate buttonDateMidBot;
+    private ButtonDate buttonDateRightTop;
+    private ButtonDate buttonDateRightMid;
+    private ButtonDate buttonDateRightBot;
+
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
         initComponents();
+        buttonDateLeftTop = new ButtonDate();
+        buttonDateLeftMid = new ButtonDate();
+        buttonDateLeftBot = new ButtonDate();
+        buttonDateMidTop = new ButtonDate();
+        buttonDateMidMid = new ButtonDate();
+        buttonDateMidBot = new ButtonDate();
+        buttonDateRightTop = new ButtonDate();
+        buttonDateRightMid = new ButtonDate();
+        buttonDateRightBot = new ButtonDate();
+
     }
 
     /**
@@ -27,12 +51,75 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonLeftTop = new javax.swing.JButton();
+        buttonMidTop = new javax.swing.JButton();
+        buttonRightTop = new javax.swing.JButton();
+        buttonLeftMid = new javax.swing.JButton();
+        buttonMidMid = new javax.swing.JButton();
+        buttonRightMid = new javax.swing.JButton();
+        buttonLeftBot = new javax.swing.JButton();
+        buttonMidBot = new javax.swing.JButton();
+        buttonRightBot = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         newGameMenu = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        buttonLeftTop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLeftTopActionPerformed(evt);
+            }
+        });
+
+        buttonMidTop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMidTopActionPerformed(evt);
+            }
+        });
+
+        buttonRightTop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRightTopActionPerformed(evt);
+            }
+        });
+
+        buttonLeftMid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLeftMidActionPerformed(evt);
+            }
+        });
+
+        buttonMidMid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMidMidActionPerformed(evt);
+            }
+        });
+
+        buttonRightMid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRightMidActionPerformed(evt);
+            }
+        });
+
+        buttonLeftBot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLeftBotActionPerformed(evt);
+            }
+        });
+
+        buttonMidBot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMidBotActionPerformed(evt);
+            }
+        });
+
+        buttonRightBot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRightBotActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Gra");
 
@@ -56,19 +143,360 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(buttonLeftBot, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(buttonLeftMid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonLeftTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(buttonMidTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonMidMid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonMidBot, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonRightTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonRightMid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonRightBot, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(buttonRightTop, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(buttonMidTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonLeftTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(buttonLeftMid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonMidMid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonRightMid, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonLeftBot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonMidBot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonRightBot, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void newGameMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameMenuActionPerformed
-        System.out.println("Klik");
+
+        try {
+            buttonDateLeftTop.setSign(null);
+            buttonLeftTop.setText(null);
+            buttonDateMidTop.setSign(null);
+            buttonMidTop.setText(null);
+            buttonDateRightTop.setSign(null);
+            buttonRightTop.setText(null);
+            buttonDateLeftMid.setSign(null);
+            buttonLeftMid.setText(null);
+            buttonDateMidMid.setSign(null);
+            buttonMidMid.setText(null);
+            buttonDateRightMid.setSign(null);
+            buttonRightMid.setText(null);
+            buttonDateLeftBot.setSign(null);
+            buttonLeftBot.setText(null);
+            buttonDateMidBot.setSign(null);
+            buttonMidBot.setText(null);
+            buttonDateRightBot.setSign(null);
+            buttonRightBot.setText(null);
+            buttonLeftTop.setEnabled(true);
+            buttonMidTop.setEnabled(true);
+            buttonRightTop.setEnabled(true);
+            buttonLeftMid.setEnabled(true);
+            buttonMidMid.setEnabled(true);
+            buttonRightMid.setEnabled(true);
+            buttonLeftBot.setEnabled(true);
+            buttonMidBot.setEnabled(true);
+            buttonRightBot.setEnabled(true);
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_newGameMenuActionPerformed
+
+    private void buttonLeftTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeftTopActionPerformed
+        try {
+            buttonDateLeftTop.setSign("x");
+            buttonLeftTop.setText("x");
+            buttonLeftTop.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+            if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonLeftTopActionPerformed
+
+    private void buttonMidTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMidTopActionPerformed
+        try {
+            buttonDateMidTop.setSign("x");
+            buttonMidTop.setText("x");
+            buttonMidTop.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+            if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonMidTopActionPerformed
+
+    private void buttonRightTopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRightTopActionPerformed
+        try {
+            buttonDateRightTop.setSign("x");
+            buttonRightTop.setText("x");
+            buttonRightTop.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+             if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonRightTopActionPerformed
+
+    private void buttonLeftMidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeftMidActionPerformed
+        try {
+            buttonDateLeftMid.setSign("x");
+            buttonLeftMid.setText("x");
+            buttonLeftMid.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+            if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonLeftMidActionPerformed
+
+    private void buttonMidMidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMidMidActionPerformed
+        try {
+            buttonDateMidMid.setSign("x");
+            buttonMidMid.setText("x");
+            buttonMidMid.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+             if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonMidMidActionPerformed
+
+    private void buttonRightMidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRightMidActionPerformed
+        try {
+            buttonDateRightMid.setSign("x");
+            buttonRightMid.setText("x");
+            buttonRightMid.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+             if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonRightMidActionPerformed
+
+    private void buttonLeftBotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeftBotActionPerformed
+        try {
+            buttonDateLeftBot.setSign("x");
+            buttonLeftBot.setText("x");
+            buttonLeftBot.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+             if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonLeftBotActionPerformed
+
+    private void buttonMidBotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMidBotActionPerformed
+        try {
+            buttonDateMidBot.setSign("x");
+            buttonMidBot.setText("x");
+            buttonMidBot.setEnabled(false);
+            pcTurn();
+
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+
+            boolean endOfGame = isEndOfGame();
+             if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_buttonMidBotActionPerformed
+
+    private void buttonRightBotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRightBotActionPerformed
+        try {
+            buttonDateRightBot.setSign("x");
+            buttonRightBot.setText("x");
+            buttonRightBot.setEnabled(false);
+            pcTurn();
+            boolean endOfGame = isEndOfGame();
+             if (endOfGame == true) {
+                JOptionPane.showMessageDialog(null, "Koniec gry");
+                buttonLeftTop.setEnabled(false);
+            buttonMidTop.setEnabled(false);
+            buttonRightTop.setEnabled(false);
+            buttonLeftMid.setEnabled(false);
+            buttonMidMid.setEnabled(false);
+            buttonRightMid.setEnabled(false);
+            buttonLeftBot.setEnabled(false);
+            buttonMidBot.setEnabled(false);
+            buttonRightBot.setEnabled(false);
+
+            }
+
+            boolean remis = remis();
+            if (remis == true) {
+                JOptionPane.showMessageDialog(null, "Remis");
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_buttonRightBotActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,7 +533,598 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
 
+    private boolean isEndOfGame() {
+        if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x")) {
+            return true;
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x")) {
+            return true;
+            ///////////////////////////////////////////////////////////////////
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o")) {
+            return true;
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o")) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private boolean remis() {
+        if (buttonDateLeftTop.getSign() != null && buttonDateMidTop.getSign() != null && buttonDateRightTop.getSign() != null && buttonDateLeftMid.getSign() != null && buttonDateMidMid.getSign() != null && buttonDateRightMid.getSign() != null && buttonDateLeftBot.getSign() != null && buttonDateMidBot.getSign() != null && buttonDateRightBot.getSign() != null) {
+            return true;
+        }
+        return false;
+    }
+
+    private void pcTurn() throws Exception {
+
+        if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } ///////////////////////////////////OBRONA (2 pola)/////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+        else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+            /////////////////////////////////////////ATAK (1 pole)//////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////
+        } else if (buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() == null && buttonDateRightTop.getSign() == null && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateRightTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o")) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o")) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() == null && buttonDateRightMid.getSign() == null && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o")) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateMidMid.getSign() == null && buttonDateRightMid.getSign() == null && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o")) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o")) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() == null && buttonDateRightBot.getSign() == null && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o")) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateMidBot.getSign() == null && buttonDateRightBot.getSign() == null && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o")) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() == null && buttonDateLeftMid.getSign() == null && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() == null && buttonDateLeftBot.getSign() == null && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() == null && buttonDateLeftBot.getSign() == null && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o")) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateMidTop.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o")) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateMidTop.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o")) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateMidMid.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o")) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateRightMid.getSign() == null && buttonDateRightTop.getSign() == null && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o")) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateRightMid.getSign() == null && buttonDateRightBot.getSign() == null && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o")) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateRightTop.getSign() == null && buttonDateRightBot.getSign() == null && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o")) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() == null && buttonDateRightBot.getSign() == null && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o")) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o")) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() == null && buttonDateRightTop.getSign() == null && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o")) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateMidMid.getSign() == null && buttonDateRightTop.getSign() == null && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o")) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+            /////////////////////////////////Gramy do końca ;D//////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("x") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+        } else if (buttonDateLeftMid.getSign() != null && buttonDateLeftMid.getSign().equals("o") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateLeftMid.getSign() == null) {
+            buttonDateLeftMid.setSign("o");
+            buttonLeftMid.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateMidBot.getSign() == null) {
+            buttonDateMidBot.setSign("o");
+            buttonMidBot.setText("o");
+
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+        } else if (buttonDateMidTop.getSign() != null && buttonDateMidTop.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("o") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateMidBot.getSign() != null && buttonDateMidBot.getSign().equals("x") && buttonDateMidTop.getSign() == null) {
+            buttonDateMidTop.setSign("o");
+            buttonMidTop.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateRightMid.getSign() == null) {
+            buttonDateRightMid.setSign("o");
+            buttonRightMid.setText("o");
+
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("o") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+        } else if (buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateRightMid.getSign() != null && buttonDateRightMid.getSign().equals("x") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightBot.getSign() == null) {
+            buttonDateRightBot.setSign("o");
+            buttonRightBot.setText("o");
+
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+        } else if (buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateLeftTop.getSign() == null) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("x") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+        } else if (buttonDateLeftTop.getSign() != null && buttonDateLeftTop.getSign().equals("o") && buttonDateRightBot.getSign() != null && buttonDateRightBot.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateLeftBot.getSign() == null) {
+            buttonDateLeftBot.setSign("o");
+            buttonLeftBot.setText("o");
+
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("o") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+        } else if (buttonDateRightTop.getSign() != null && buttonDateRightTop.getSign().equals("x") && buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidMid.getSign() == null) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("x") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("o") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+        } else if (buttonDateLeftBot.getSign() != null && buttonDateLeftBot.getSign().equals("o") && buttonDateMidMid.getSign() != null && buttonDateMidMid.getSign().equals("x") && buttonDateRightTop.getSign() == null) {
+            buttonDateRightTop.setSign("o");
+            buttonRightTop.setText("o");
+
+            ////////////////////////////////////////Pierwszy ruch/////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightMid.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateRightBot.getSign() != null) && buttonDateRightBot.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateRightMid.getSign() != null) && buttonDateRightMid.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightMid.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateRightTop.getSign() != null) && buttonDateRightTop.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateRightMid.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateMidTop.getSign() != null) && buttonDateMidTop.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateRightMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateMidMid.getSign() != null) && buttonDateMidMid.getSign().equals("x")) {
+            buttonDateLeftTop.setSign("o");
+            buttonLeftTop.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateRightMid.getSign() == null && buttonDateMidBot.getSign() != null) && buttonDateMidBot.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateRightMid.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateLeftTop.getSign() != null) && buttonDateLeftTop.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateRightMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateLeftBot.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateLeftMid.getSign() != null) && buttonDateLeftMid.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        } else if ((buttonDateLeftTop.getSign() == null && buttonDateMidTop.getSign() == null && buttonDateRightTop.getSign() == null
+                && buttonDateLeftMid.getSign() == null && buttonDateMidMid.getSign() == null && buttonDateRightBot.getSign() == null
+                && buttonDateRightMid.getSign() == null && buttonDateMidBot.getSign() == null && buttonDateLeftBot.getSign() != null) && buttonDateLeftBot.getSign().equals("x")) {
+            buttonDateMidMid.setSign("o");
+            buttonMidMid.setText("o");
+
+        }
+    }
+
+    /* Zapisac wygrana pc (sprobowac wygrac)/ 2 sprobowac nie przegrac (blokowac podwojne x)/
+       1 szukac lini gdzie jest jedno o i dwa puste pola, nowa gra wszystkie przyciski/ zrobic popup
+        po remisie i koncu gry/ poblokuj przyciski  buttonLeftTop.setEnabled(false);
+        
+        
+        
+        
+        
+        
+     */
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonLeftBot;
+    private javax.swing.JButton buttonLeftMid;
+    private javax.swing.JButton buttonLeftTop;
+    private javax.swing.JButton buttonMidBot;
+    private javax.swing.JButton buttonMidMid;
+    private javax.swing.JButton buttonMidTop;
+    private javax.swing.JButton buttonRightBot;
+    private javax.swing.JButton buttonRightMid;
+    private javax.swing.JButton buttonRightTop;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
